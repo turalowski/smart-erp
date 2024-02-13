@@ -13,13 +13,22 @@ import {
   Warehouse,
 } from 'lucide-react';
 import { useState } from 'react';
+
 import { Nav } from './_components/navbar';
+import TeamSwitcher from './_components/company-switcher';
+import { UserNav } from './_components/user-nav';
 
 export default function Home() {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <div className="h-12">Header</div>
+      <div className="w-full h-16 flex items-center justify-between py-3 px-6">
+        <TeamSwitcher />
+        <div className="flex items-center gap-3">
+          <p className="text-sm">thajiyev9@outlook.com</p>
+          <UserNav />
+        </div>
+      </div>
       <ResizablePanelGroup
         direction="horizontal"
         className="grow w-full rounded-lg border"
