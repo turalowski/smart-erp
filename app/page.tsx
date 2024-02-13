@@ -6,17 +6,10 @@ import {
   ResizablePanelGroup,
 } from '@/components/ui/resizable';
 import {
-  Archive,
-  ArchiveX,
   CandlestickChart,
   ClipboardMinus,
   Contact,
-  Contact2,
-  File,
-  Inbox,
   PackageSearch,
-  Send,
-  Trash2,
   Warehouse,
 } from 'lucide-react';
 import { useState } from 'react';
