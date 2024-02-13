@@ -10,6 +10,8 @@ import {
   ClipboardMinus,
   Contact,
   PackageSearch,
+  Plus,
+  User,
   Warehouse,
 } from 'lucide-react';
 import { useState } from 'react';
@@ -17,6 +19,8 @@ import { useState } from 'react';
 import { Nav } from './_components/navbar';
 import TeamSwitcher from './_components/company-switcher';
 import { UserNav } from './_components/user-nav';
+import Relations from './_components/relations';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
@@ -35,7 +39,7 @@ export default function Home() {
       >
         <ResizablePanel
           minSize={15}
-          maxSize={20}
+          maxSize={15}
           defaultSize={15}
           collapsedSize={4}
           collapsible={true}
@@ -86,8 +90,12 @@ export default function Home() {
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={85}>
-          <div className="flex h-full items-center justify-center p-6">
-            <span className="font-semibold">Content</span>
+          <div className="flex justify-between items-center p-3">
+            <Relations />
+            <Button className="flex items-center gap-1" size="sm">
+              New Relation
+              <User className="w-4 h-4" />
+            </Button>
           </div>
         </ResizablePanel>
       </ResizablePanelGroup>
